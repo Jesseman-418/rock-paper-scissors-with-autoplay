@@ -1,0 +1,64 @@
+/* Define animation for button hover */
+.move-button:hover .move-icon {
+  transform: translateY(-5px);
+}
+
+/* Define animation for button click */
+.move-button:active .move-icon {
+  transform: translateY(-2px);
+}
+
+/* Define animation for image */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.move-icon {
+  transition: transform 0.2s ease; /* Added transition property */
+  animation: zoomIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+body {
+  background-color: rgb(25, 25, 25);
+  color: white;
+  font-family: arial;
+}
+.title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.move-icon {
+  height: 50px;
+}
+
+.move-button {
+  background-color: transparent;
+  border: 3px solid white;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.result {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+.score {
+  margin-top: 60px;
+}
+.reset-score-button,.auto-play-button {
+  background-color: white;
+  border: none;
+  font-size: 15px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
